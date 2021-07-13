@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration</title>
+    <style>
+        .form-background {
+            clip-path: polygon(50% 0%, 100% 0, 93% 60%, 70% 100%, 17% 93%, 4% 100%, 0 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" primary-background form-background">
+        <!-- take coontainer -->
+        <div class="container" style="width: 45rem;">
+            <!-- card --><br><br>
+            <div class="card"><br><br>
+                <div class="text-center text-danger">
+                    <i class="fa fa-user-plus" style="font-size:60px;"></i>
+                    <h2>Registration</h2>
+                </div><br>
+                <div class="card-body">
+                    <form action="RegisterServlet" method="POST" class="text-secondary">
+                        <div class="row">
+                            <div class="col s4">
+                                <input type="text" name="user_fname" placeholder="First Name" aria-label="First Name" class="form-control">
+                            </div>
+                            <div class="col s4">
+                                <input type="text" name="user_lname" placeholder="Last Name " aria-label="Last Name " class="form-control ">
+                            </div>
+                            <div class="col s4 ">
+                                <input type="email" name="user_email" placeholder="username123@gmail.com" aria-label="username123@gmail.com" class="form-control">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col s4">
+                                <select class="form-select" aria-label="Institution">
+                                <option >Institution </option>
+                                <option value="SVCE">Swami Vivekanand college of Engineering</option>
+                                <option value="Acropolice Institution">Acropolice Institution</option>
+                                <option value="MIT">Mahankal Institution of Technology</option>
+                              </select>
+                            </div>
+                            <div class="col s4">
+                                <select class="form-select" aria-label="Course">
+                                <option >Course </option>
+                                <option value="B.tech">B.tech</option>
+                                <option value="BCA">BCA</option>
+                                <option value="M.tech">M.tech</option>
+                                <option value="MCA">MCA</option>
+                              </select>
+                            </div>
+                            <div class="col s4">
+                                <select class="form-select" aria-label="Stream">
+                                <option >Stream </option>
+                                <option value="Computer Science Engineering">Computer Science Engineering</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Electronics Engineering">Electronics Engineering</option>
+                                <option value="Information Technology Engineering">Information Technology Engineering</option>
+                              </select>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col s4">
+                                <input type="tel" name="user_number" class="form-control" id="" aria-label="Phone Number" placeholder="Phone Number">
+                            </div>
+                            <div class="col s4">
+                                <label>Date of birth : </label><br>
+                                <input type="date" class="form-control" name="user_dob" id="" aria-label="Date of Birth" placeholder="Date of Birth">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col s6">
+                                <textarea name="user_address" id="" rows="3" class="form-control" aria-label="Address" placeholder="Address"></textarea>
+                            </div>
+                            <div class="col s6">
+                                <span>Select Gender : </span><br><br>
+                                <input type="radio" name="user_gender" id="r1" value="Female">&nbsp;Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="user_gender" id="r1" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="user_gender" id="r1" value="Other">&nbsp;Not Specified
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col s4">
+                                <select class="form-select" aria-label="Default select example">
+                                <option selected>Select City</option>
+                                <option value="1">Indore</option>
+                                <option value="2">Bhopal</option>
+                                <option value="3">Dewas</option>
+                              </select>
+                            </div>
+                            <div class="col s4">
+                                <select class="form-select" aria-label="Select State" name="user_state">
+                                <option selected>Select State</option>
+                                <option value="M.P.">Madhya Pradesh</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              </select>
+                            </div>
+                            <div class="col s4">
+                                <input type="tel" name="user_zip_code" id="" aria-label="Zip Code" placeholder="Zip Code" class="form-control">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col s6">
+                                <input type="file" class="form-control" aria-label="file example" placeholder="10th Marksheet" required>
+                            </div>
+                            <div class="col s6">
+                                <input type="file" class="form-control" aria-label="file example" placeholder="12th Marksheet" required>
+                            </div>
+                        </div><br>
+                        <div class="row ">
+                            <div class="col s6 ">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" name="user_password" id="floatingPassword" placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+                            </div>
+                            <div class="col s6 ">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" name="con_password" id="floatingPassword" placeholder="Confirm Password">
+                                    <label for="floatingPassword">Confirm Password</label>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" value="checked" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                  </label>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-danger btn-lg" style="width: 300px;">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer  -->
+
+    <div class="container-fluid primary-background position-absolute">
+        <div class="container my-lg-5">
+            <a href="home.jsp" class="primary-background text-light" id="anchor" aria-controls="page">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="primary-background text-light" id="anchor" aria-autocomplete="both">Privacy & Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="primary-background text-light" id="anchor" aria-controls="page">Terms & condition</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="primary-background text-light align-right" id="anchor" aria-controls="page">Team Guide</a>
+        </div>
+
+        <cite class="container text-light text-center"> &COPY; All right reserved</cite>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
